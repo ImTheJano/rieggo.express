@@ -27,8 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
-app.use('/rieggo/api/mailchimp',require('./routes/mailchimp'))
+app.use('/', indexRouter);
+app.use('/api/mailchimp',require('./routes/mailchimp'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
